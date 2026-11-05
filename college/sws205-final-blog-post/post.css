@@ -1,0 +1,241 @@
+:root {
+    color-scheme: light;
+    --paper: #f8f7f3;
+    --ink: #252923;
+    --muted: #66695f;
+    --line: #dcded4;
+    --accent: #586348;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+::selection {
+    background: #dce2cf;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 0.22em;
+    text-decoration-thickness: 1px;
+}
+
+a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 6px;
+    border-radius: 2px;
+}
+
+.skip-link {
+    position: absolute;
+    z-index: 1;
+    top: 12px;
+    left: 24px;
+    padding: 12px 16px;
+    background: var(--paper);
+    transform: translateY(-180%);
+}
+
+.skip-link:focus {
+    transform: none;
+}
+
+.site-header {
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 104px;
+    padding: 24px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.site-name {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    text-decoration: none;
+}
+
+.site-name span {
+    color: var(--muted);
+    font-weight: 400;
+}
+
+.course {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.16em;
+    color: var(--muted);
+}
+
+main {
+    max-width: 976px;
+    margin: 62px auto 120px;
+    padding: 0 48px;
+}
+
+.article-header {
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--line);
+}
+
+.article-header::before {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    margin-bottom: 28px;
+    background: var(--accent);
+}
+
+h1 {
+    max-width: 850px;
+    margin: 0;
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-size: clamp(2.6rem, 5.3vw, 4.6rem);
+    font-weight: 400;
+    line-height: 1.08;
+    letter-spacing: -0.045em;
+    text-wrap: balance;
+}
+
+.article-body {
+    max-width: 660px;
+    margin: 44px auto 0;
+    font-size: 17px;
+    line-height: 1.85;
+}
+
+p {
+    margin: 0 0 1.3em;
+}
+
+.introduction p:first-child {
+    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
+    font-size: 24px;
+    line-height: 1.6;
+    letter-spacing: -0.015em;
+}
+
+section {
+    margin-top: 56px;
+}
+
+h2 {
+    margin: 0 0 22px;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1.35;
+    letter-spacing: -0.035em;
+    text-wrap: balance;
+    scroll-margin-top: 32px;
+}
+
+.source {
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--line);
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.75;
+}
+
+.source h2 {
+    margin-bottom: 16px;
+    color: var(--ink);
+    font-size: 14px;
+    letter-spacing: 0;
+}
+
+.source a {
+    color: var(--accent);
+    overflow-wrap: anywhere;
+}
+
+.source a:hover {
+    text-decoration-thickness: 2px;
+}
+
+@media (max-width: 640px) {
+    .site-header {
+        min-height: 80px;
+        padding: 18px 24px;
+    }
+
+    main {
+        margin: 40px auto 64px;
+        padding: 0 24px;
+    }
+
+    .article-header {
+        padding-bottom: 32px;
+    }
+
+    .article-body {
+        margin-top: 32px;
+        font-size: 16px;
+        line-height: 1.8;
+    }
+
+    .introduction p:first-child {
+        font-size: 21px;
+    }
+
+    section {
+        margin-top: 40px;
+    }
+
+    h2 {
+        font-size: 21px;
+    }
+}
+
+@media print {
+    :root {
+        background: white;
+        color: black;
+    }
+
+    .site-header,
+    .skip-link {
+        display: none;
+    }
+
+    main {
+        margin: 0;
+        max-width: none;
+        padding: 0;
+    }
+
+    h1 {
+        font-size: 32pt;
+    }
+
+    .article-body {
+        max-width: none;
+        font-size: 11pt;
+    }
+
+    h2 {
+        break-after: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}

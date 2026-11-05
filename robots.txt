@@ -1,0 +1,5 @@
+# Generated from site.config.json. Do not edit directly.
+User-agent: *
+Disallow: /college/sws205-final-blog-post
+
+Sitemap: https://pathakanshu.com/sitemap.xml

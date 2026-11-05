@@ -1,0 +1,9 @@
+{
+    "siteUrl": "https://pathakanshu.com",
+    "sitemap": {
+        "exclude": ["/college/sws205-final-blog-post"]
+    },
+    "robots": {
+        "disallow": ["/college/sws205-final-blog-post"]
+    }
+}

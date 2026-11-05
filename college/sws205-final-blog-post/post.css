@@ -50,10 +50,10 @@ a:focus-visible {
 }
 
 .site-header {
-    max-width: 1200px;
+    max-width: 792px;
     margin: 0 auto;
-    min-height: 104px;
-    padding: 24px 48px;
+    min-height: 88px;
+    padding: 20px 48px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,13 +83,13 @@ a:focus-visible {
 }
 
 main {
-    max-width: 976px;
-    margin: 62px auto 120px;
+    max-width: 792px;
+    margin: 32px auto 88px;
     padding: 0 48px;
 }
 
 .article-header {
-    padding-bottom: 48px;
+    padding-bottom: 28px;
     border-bottom: 1px solid var(--line);
 }
 
@@ -98,45 +98,36 @@ main {
     display: block;
     width: 40px;
     height: 3px;
-    margin-bottom: 28px;
+    margin-bottom: 18px;
     background: var(--accent);
 }
 
 h1 {
-    max-width: 850px;
     margin: 0;
     font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-    font-size: clamp(2.6rem, 5.3vw, 4.6rem);
+    font-size: clamp(2rem, 3.8vw, 3rem);
     font-weight: 400;
-    line-height: 1.08;
-    letter-spacing: -0.045em;
+    line-height: 1.15;
+    letter-spacing: -0.035em;
     text-wrap: balance;
 }
 
 .article-body {
-    max-width: 660px;
-    margin: 44px auto 0;
+    margin: 28px 0 0;
     font-size: 17px;
-    line-height: 1.85;
+    line-height: 1.75;
 }
 
 p {
-    margin: 0 0 1.3em;
-}
-
-.introduction p:first-child {
-    font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Palatino, Georgia, serif;
-    font-size: 24px;
-    line-height: 1.6;
-    letter-spacing: -0.015em;
+    margin: 0 0 1.15em;
 }
 
 section {
-    margin-top: 56px;
+    margin-top: 40px;
 }
 
 h2 {
-    margin: 0 0 22px;
+    margin: 0 0 18px;
     font-size: 22px;
     font-weight: 600;
     line-height: 1.35;
@@ -146,8 +137,8 @@ h2 {
 }
 
 .source {
-    margin-top: 64px;
-    padding-top: 28px;
+    margin-top: 48px;
+    padding-top: 24px;
     border-top: 1px solid var(--line);
     color: var(--muted);
     font-size: 14px;
@@ -177,26 +168,22 @@ h2 {
     }
 
     main {
-        margin: 40px auto 64px;
+        margin: 24px auto 64px;
         padding: 0 24px;
     }
 
     .article-header {
-        padding-bottom: 32px;
+        padding-bottom: 24px;
     }
 
     .article-body {
-        margin-top: 32px;
+        margin-top: 24px;
         font-size: 16px;
         line-height: 1.8;
     }
 
-    .introduction p:first-child {
-        font-size: 21px;
-    }
-
     section {
-        margin-top: 40px;
+        margin-top: 32px;
     }
 
     h2 {

@@ -27,6 +27,11 @@ node scripts/generate-site-metadata.mjs --check
 
 The generator discovers HTML pages recursively, maps `index.html` files to their
 directory URLs, and writes deterministic `sitemap.xml` and `robots.txt` files.
+It also adds a content-derived `v` query parameter to local stylesheet links,
+including on pages excluded from the sitemap. Changing a stylesheet and rerunning
+the generator updates its version automatically, so caches request the new CSS.
+External stylesheets and inline homepage styles are left untouched. Commit the
+updated HTML alongside stylesheet changes; `--check` also detects stale versions.
 Hidden and development directories, error pages, and pages with a robots,
 Googlebot, or Bingbot `noindex`/`none` meta directive are not included. No fabricated
 modification dates are emitted. Keep the generated files checked in for branch-based
